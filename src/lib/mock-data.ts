@@ -193,7 +193,7 @@ export const CLUB_COLORS = [
 ];
 
 export function playerById(id: string): Player {
-  return PLAYERS.find((p) => p.id === id) ?? PLAYERS[0];
+  return PLAYERS.find((p) => p.id === id) ?? PLAYERS[0]!;
 }
 
 export function winRate(p: Player) {

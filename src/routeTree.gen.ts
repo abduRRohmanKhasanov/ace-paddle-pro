@@ -10,7 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AdminIndexRouteImport } from './routes/admin/index'
+import { Route as AdminSettingsRouteImport } from './routes/admin/settings'
 import { Route as ClubIndexRouteImport } from './routes/club/index'
+import { Route as ClubCompareRouteImport } from './routes/club/compare'
+import { Route as ClubProfileRouteImport } from './routes/club/profile'
 import { Route as ClubRatingRouteImport } from './routes/club/rating'
 import { Route as ClubRulesRouteImport } from './routes/club/rules'
 
@@ -19,9 +23,29 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/admin/',
+  path: '/admin/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminSettingsRoute = AdminSettingsRouteImport.update({
+  id: '/admin/settings',
+  path: '/admin/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ClubIndexRoute = ClubIndexRouteImport.update({
   id: '/club/',
   path: '/club/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClubCompareRoute = ClubCompareRouteImport.update({
+  id: '/club/compare',
+  path: '/club/compare',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClubProfileRoute = ClubProfileRouteImport.update({
+  id: '/club/profile',
+  path: '/club/profile',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ClubRatingRoute = ClubRatingRouteImport.update({
@@ -37,35 +61,76 @@ const ClubRulesRoute = ClubRulesRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/club/compare': typeof ClubCompareRoute
+  '/club/profile': typeof ClubProfileRoute
   '/club/rating': typeof ClubRatingRoute
   '/club/rules': typeof ClubRulesRoute
+  '/admin/': typeof AdminIndexRoute
   '/club/': typeof ClubIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/club/compare': typeof ClubCompareRoute
+  '/club/profile': typeof ClubProfileRoute
   '/club/rating': typeof ClubRatingRoute
   '/club/rules': typeof ClubRulesRoute
+  '/admin': typeof AdminIndexRoute
   '/club': typeof ClubIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/club/compare': typeof ClubCompareRoute
+  '/club/profile': typeof ClubProfileRoute
   '/club/rating': typeof ClubRatingRoute
   '/club/rules': typeof ClubRulesRoute
+  '/admin/': typeof AdminIndexRoute
   '/club/': typeof ClubIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/club/rating' | '/club/rules' | '/club/'
+  fullPaths:
+    | '/'
+    | '/admin/settings'
+    | '/club/compare'
+    | '/club/profile'
+    | '/club/rating'
+    | '/club/rules'
+    | '/admin/'
+    | '/club/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/club/rating' | '/club/rules' | '/club'
-  id: '__root__' | '/' | '/club/rating' | '/club/rules' | '/club/'
+  to:
+    | '/'
+    | '/admin/settings'
+    | '/club/compare'
+    | '/club/profile'
+    | '/club/rating'
+    | '/club/rules'
+    | '/admin'
+    | '/club'
+  id:
+    | '__root__'
+    | '/'
+    | '/admin/settings'
+    | '/club/compare'
+    | '/club/profile'
+    | '/club/rating'
+    | '/club/rules'
+    | '/admin/'
+    | '/club/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdminSettingsRoute: typeof AdminSettingsRoute
+  ClubCompareRoute: typeof ClubCompareRoute
+  ClubProfileRoute: typeof ClubProfileRoute
   ClubRatingRoute: typeof ClubRatingRoute
   ClubRulesRoute: typeof ClubRulesRoute
+  AdminIndexRoute: typeof AdminIndexRoute
   ClubIndexRoute: typeof ClubIndexRoute
 }
 
@@ -78,11 +143,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/': {
+      id: '/admin/'
+      path: '/admin'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/settings': {
+      id: '/admin/settings'
+      path: '/admin/settings'
+      fullPath: '/admin/settings'
+      preLoaderRoute: typeof AdminSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/club/': {
       id: '/club/'
       path: '/club'
       fullPath: '/club/'
       preLoaderRoute: typeof ClubIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/club/compare': {
+      id: '/club/compare'
+      path: '/club/compare'
+      fullPath: '/club/compare'
+      preLoaderRoute: typeof ClubCompareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/club/profile': {
+      id: '/club/profile'
+      path: '/club/profile'
+      fullPath: '/club/profile'
+      preLoaderRoute: typeof ClubProfileRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/club/rating': {
@@ -104,8 +197,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdminSettingsRoute: AdminSettingsRoute,
+  ClubCompareRoute: ClubCompareRoute,
+  ClubProfileRoute: ClubProfileRoute,
   ClubRatingRoute: ClubRatingRoute,
   ClubRulesRoute: ClubRulesRoute,
+  AdminIndexRoute: AdminIndexRoute,
   ClubIndexRoute: ClubIndexRoute,
 }
 export const routeTree = rootRouteImport

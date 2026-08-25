@@ -10,8 +10,13 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as OnboardingRouteImport } from './routes/onboarding'
+import { Route as RefereeRouteImport } from './routes/referee'
 import { Route as AdminIndexRouteImport } from './routes/admin/index'
+import { Route as AdminPlayersRouteImport } from './routes/admin/players'
+import { Route as AdminRefereesRouteImport } from './routes/admin/referees'
 import { Route as AdminSettingsRouteImport } from './routes/admin/settings'
+import { Route as AdminTournamentsRouteImport } from './routes/admin/tournaments'
 import { Route as ClubIndexRouteImport } from './routes/club/index'
 import { Route as ClubCompareRouteImport } from './routes/club/compare'
 import { Route as ClubProfileRouteImport } from './routes/club/profile'
@@ -23,14 +28,39 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OnboardingRoute = OnboardingRouteImport.update({
+  id: '/onboarding',
+  path: '/onboarding',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RefereeRoute = RefereeRouteImport.update({
+  id: '/referee',
+  path: '/referee',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminIndexRoute = AdminIndexRouteImport.update({
   id: '/admin/',
   path: '/admin/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminPlayersRoute = AdminPlayersRouteImport.update({
+  id: '/admin/players',
+  path: '/admin/players',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRefereesRoute = AdminRefereesRouteImport.update({
+  id: '/admin/referees',
+  path: '/admin/referees',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminSettingsRoute = AdminSettingsRouteImport.update({
   id: '/admin/settings',
   path: '/admin/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminTournamentsRoute = AdminTournamentsRouteImport.update({
+  id: '/admin/tournaments',
+  path: '/admin/tournaments',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ClubIndexRoute = ClubIndexRouteImport.update({
@@ -61,7 +91,12 @@ const ClubRulesRoute = ClubRulesRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/onboarding': typeof OnboardingRoute
+  '/referee': typeof RefereeRoute
+  '/admin/players': typeof AdminPlayersRoute
+  '/admin/referees': typeof AdminRefereesRoute
   '/admin/settings': typeof AdminSettingsRoute
+  '/admin/tournaments': typeof AdminTournamentsRoute
   '/club/compare': typeof ClubCompareRoute
   '/club/profile': typeof ClubProfileRoute
   '/club/rating': typeof ClubRatingRoute
@@ -71,7 +106,12 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/onboarding': typeof OnboardingRoute
+  '/referee': typeof RefereeRoute
+  '/admin/players': typeof AdminPlayersRoute
+  '/admin/referees': typeof AdminRefereesRoute
   '/admin/settings': typeof AdminSettingsRoute
+  '/admin/tournaments': typeof AdminTournamentsRoute
   '/club/compare': typeof ClubCompareRoute
   '/club/profile': typeof ClubProfileRoute
   '/club/rating': typeof ClubRatingRoute
@@ -82,7 +122,12 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/onboarding': typeof OnboardingRoute
+  '/referee': typeof RefereeRoute
+  '/admin/players': typeof AdminPlayersRoute
+  '/admin/referees': typeof AdminRefereesRoute
   '/admin/settings': typeof AdminSettingsRoute
+  '/admin/tournaments': typeof AdminTournamentsRoute
   '/club/compare': typeof ClubCompareRoute
   '/club/profile': typeof ClubProfileRoute
   '/club/rating': typeof ClubRatingRoute
@@ -94,7 +139,12 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/onboarding'
+    | '/referee'
+    | '/admin/players'
+    | '/admin/referees'
     | '/admin/settings'
+    | '/admin/tournaments'
     | '/club/compare'
     | '/club/profile'
     | '/club/rating'
@@ -104,7 +154,12 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/onboarding'
+    | '/referee'
+    | '/admin/players'
+    | '/admin/referees'
     | '/admin/settings'
+    | '/admin/tournaments'
     | '/club/compare'
     | '/club/profile'
     | '/club/rating'
@@ -114,7 +169,12 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/onboarding'
+    | '/referee'
+    | '/admin/players'
+    | '/admin/referees'
     | '/admin/settings'
+    | '/admin/tournaments'
     | '/club/compare'
     | '/club/profile'
     | '/club/rating'
@@ -125,7 +185,12 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  OnboardingRoute: typeof OnboardingRoute
+  RefereeRoute: typeof RefereeRoute
+  AdminPlayersRoute: typeof AdminPlayersRoute
+  AdminRefereesRoute: typeof AdminRefereesRoute
   AdminSettingsRoute: typeof AdminSettingsRoute
+  AdminTournamentsRoute: typeof AdminTournamentsRoute
   ClubCompareRoute: typeof ClubCompareRoute
   ClubProfileRoute: typeof ClubProfileRoute
   ClubRatingRoute: typeof ClubRatingRoute
@@ -143,6 +208,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/onboarding': {
+      id: '/onboarding'
+      path: '/onboarding'
+      fullPath: '/onboarding'
+      preLoaderRoute: typeof OnboardingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/referee': {
+      id: '/referee'
+      path: '/referee'
+      fullPath: '/referee'
+      preLoaderRoute: typeof RefereeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/': {
       id: '/admin/'
       path: '/admin'
@@ -150,11 +229,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/players': {
+      id: '/admin/players'
+      path: '/admin/players'
+      fullPath: '/admin/players'
+      preLoaderRoute: typeof AdminPlayersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/referees': {
+      id: '/admin/referees'
+      path: '/admin/referees'
+      fullPath: '/admin/referees'
+      preLoaderRoute: typeof AdminRefereesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/settings': {
       id: '/admin/settings'
       path: '/admin/settings'
       fullPath: '/admin/settings'
       preLoaderRoute: typeof AdminSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/tournaments': {
+      id: '/admin/tournaments'
+      path: '/admin/tournaments'
+      fullPath: '/admin/tournaments'
+      preLoaderRoute: typeof AdminTournamentsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/club/': {
@@ -197,7 +297,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  OnboardingRoute: OnboardingRoute,
+  RefereeRoute: RefereeRoute,
+  AdminPlayersRoute: AdminPlayersRoute,
+  AdminRefereesRoute: AdminRefereesRoute,
   AdminSettingsRoute: AdminSettingsRoute,
+  AdminTournamentsRoute: AdminTournamentsRoute,
   ClubCompareRoute: ClubCompareRoute,
   ClubProfileRoute: ClubProfileRoute,
   ClubRatingRoute: ClubRatingRoute,

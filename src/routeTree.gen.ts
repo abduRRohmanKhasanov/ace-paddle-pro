@@ -10,6 +10,8 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as DemoRouteImport } from './routes/demo'
 import { Route as OnboardingRouteImport } from './routes/onboarding'
 import { Route as RefereeRouteImport } from './routes/referee'
 import { Route as AdminIndexRouteImport } from './routes/admin/index'
@@ -26,6 +28,16 @@ import { Route as ClubRulesRouteImport } from './routes/club/rules'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemoRoute = DemoRouteImport.update({
+  id: '/demo',
+  path: '/demo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OnboardingRoute = OnboardingRouteImport.update({
@@ -91,6 +103,8 @@ const ClubRulesRoute = ClubRulesRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
+  '/demo': typeof DemoRoute
   '/onboarding': typeof OnboardingRoute
   '/referee': typeof RefereeRoute
   '/admin/players': typeof AdminPlayersRoute
@@ -106,6 +120,8 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
+  '/demo': typeof DemoRoute
   '/onboarding': typeof OnboardingRoute
   '/referee': typeof RefereeRoute
   '/admin/players': typeof AdminPlayersRoute
@@ -122,6 +138,8 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
+  '/demo': typeof DemoRoute
   '/onboarding': typeof OnboardingRoute
   '/referee': typeof RefereeRoute
   '/admin/players': typeof AdminPlayersRoute
@@ -139,6 +157,8 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/auth'
+    | '/demo'
     | '/onboarding'
     | '/referee'
     | '/admin/players'
@@ -154,6 +174,8 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/auth'
+    | '/demo'
     | '/onboarding'
     | '/referee'
     | '/admin/players'
@@ -169,6 +191,8 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/auth'
+    | '/demo'
     | '/onboarding'
     | '/referee'
     | '/admin/players'
@@ -185,6 +209,8 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthRoute: typeof AuthRoute
+  DemoRoute: typeof DemoRoute
   OnboardingRoute: typeof OnboardingRoute
   RefereeRoute: typeof RefereeRoute
   AdminPlayersRoute: typeof AdminPlayersRoute
@@ -206,6 +232,20 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demo': {
+      id: '/demo'
+      path: '/demo'
+      fullPath: '/demo'
+      preLoaderRoute: typeof DemoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/onboarding': {
@@ -297,6 +337,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthRoute: AuthRoute,
+  DemoRoute: DemoRoute,
   OnboardingRoute: OnboardingRoute,
   RefereeRoute: RefereeRoute,
   AdminPlayersRoute: AdminPlayersRoute,

@@ -101,14 +101,18 @@ function Landing() {
     <div className="min-h-dvh bg-surface">
       <header className="sticky top-0 z-30 border-b border-outline-variant bg-surface/85 backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-5 py-3">
-          <span className="flex items-center gap-2">
+          <Link
+            to="/demo"
+            className="pressable flex items-center gap-2 rounded-2xl pr-2 active:press-active"
+            aria-label="Открыть демо-режим выбора роли"
+          >
             <span className="flex size-9 items-center justify-center rounded-2xl bg-primary">
               <span className="text-base font-extrabold text-on-primary">R</span>
             </span>
             <span className="text-title-m text-on-surface">
               Rally<span className="text-primary">Point</span>
             </span>
-          </span>
+          </Link>
           <AuthButtons />
         </div>
       </header>

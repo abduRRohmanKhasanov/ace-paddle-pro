@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * RallyPoint — Material Design 3 (Expressive) design system.
+ * ttSetka — Material Design 3 (Expressive) design system.
  * Тональные поверхности, крупные радиусы, динамический «цвет клуба».
  * Цвет клуба хранится как hue и пересчитывается под светлую/тёмную тему.
  */

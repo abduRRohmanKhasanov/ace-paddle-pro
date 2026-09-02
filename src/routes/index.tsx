@@ -14,13 +14,13 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "RallyPoint — платформа для клубов настольного тенниса" },
+      { title: "ttSetka — платформа для клубов настольного тенниса" },
       {
         name: "description",
         content:
-          "RallyPoint объединяет рейтинг клуба, турниры, профили игроков и живое судейство столов в одном мобильном приложении. Зарегистрируйте свой клуб за 4 шага.",
+          "ttSetka объединяет рейтинг клуба, турниры, профили игроков и живое судейство столов в одном мобильном приложении. Зарегистрируйте свой клуб за 4 шага.",
       },
-      { property: "og:title", content: "RallyPoint — платформа для клубов настольного тенниса" },
+      { property: "og:title", content: "ttSetka — платформа для клубов настольного тенниса" },
       {
         property: "og:description",
         content:
@@ -107,10 +107,10 @@ function Landing() {
             aria-label="Открыть демо-режим выбора роли"
           >
             <span className="flex size-9 items-center justify-center rounded-2xl bg-primary">
-              <span className="text-base font-extrabold text-on-primary">R</span>
+              <span className="text-base font-extrabold text-on-primary">tt</span>
             </span>
             <span className="text-title-m text-on-surface">
-              Rally<span className="text-primary">Point</span>
+              tt<span className="text-primary">Setka</span>
             </span>
           </Link>
           <AuthButtons />
@@ -128,7 +128,7 @@ function Landing() {
             Весь клуб настольного тенниса — в одном приложении
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-on-surface-variant">
-            RallyPoint ведёт рейтинг игроков, проводит турниры, хранит профили и историю матчей и
+            ttSetka ведёт рейтинг игроков, проводит турниры, хранит профили и историю матчей и
             позволяет судить столы с телефона. Больше никаких таблиц в мессенджерах и споров о том,
             кто сильнее.
           </p>
@@ -238,7 +238,7 @@ function Landing() {
       <footer className="border-t border-outline-variant px-5 py-8">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-3 text-center">
           <span className="text-title-m text-on-surface">
-            Rally<span className="text-primary">Point</span>
+            tt<span className="text-primary">Setka</span>
           </span>
           <p className="text-xs text-on-surface-variant">
             Платформа для клубов настольного тенниса · Material Design 3 · демо-данные

@@ -4,13 +4,13 @@ import { ArrowLeft, ArrowRight, ClipboardList, Sparkles, Trophy, User } from "lu
 export const Route = createFileRoute("/demo")({
   head: () => ({
     meta: [
-      { title: "Демо-режим RallyPoint — выбор роли" },
+      { title: "Демо-режим ttSetka — выбор роли" },
       {
         name: "description",
         content:
-          "Пройдите сценарий игрока, администратора клуба или судьи стола в кликабельном прототипе RallyPoint.",
+          "Пройдите сценарий игрока, администратора клуба или судьи стола в кликабельном прототипе ttSetka.",
       },
-      { property: "og:title", content: "Демо-режим RallyPoint — выбор роли" },
+      { property: "og:title", content: "Демо-режим ttSetka — выбор роли" },
       {
         property: "og:description",
         content: "Игрок, администратор и судья: три сценария демонстрационного клуба «ТопСпин».",
@@ -60,10 +60,10 @@ function Launcher() {
 
         <div>
           <div className="mb-5 flex size-14 items-center justify-center rounded-3xl bg-primary shadow-elev-2">
-            <span className="text-2xl font-extrabold text-on-primary">R</span>
+            <span className="text-2xl font-extrabold text-on-primary">tt</span>
           </div>
           <h1 className="text-display-s text-on-surface">
-            Rally<span className="text-primary">Point</span>
+            tt<span className="text-primary">Setka</span>
           </h1>
           <p className="mt-3 text-base leading-relaxed text-on-surface-variant">
             Демо-режим. Клуб «ТопСпин» уже настроен — выберите роль, чтобы пройти её сценарий.

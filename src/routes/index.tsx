@@ -238,7 +238,7 @@ function Landing() {
       <footer className="border-t border-outline-variant px-5 py-8">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-3 text-center">
           <span className="text-title-m text-on-surface">
-            Rally<span className="text-primary">Point</span>
+            tt<span className="text-primary">Setka</span>
           </span>
           <p className="text-xs text-on-surface-variant">
             Платформа для клубов настольного тенниса · Material Design 3 · демо-данные

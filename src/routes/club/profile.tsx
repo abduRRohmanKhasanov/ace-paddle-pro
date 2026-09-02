@@ -115,14 +115,13 @@ function ProfilePage() {
       {/* Шапка профиля */}
       <section className="rounded-4xl bg-surface-container-low p-5 shadow-elev-1">
         <div className="min-w-0">
-            <h1 className="flex items-center gap-1.5 text-title-l text-on-surface">
-              {me.name}
-              <CrownBadge kind={me.crown} />
-            </h1>
-            <p className="mt-0.5 text-sm text-on-surface-variant">
-              В клубе {me.joinedAt} · {rankOf(me.id)} место в рейтинге
-            </p>
-          </div>
+          <h1 className="flex items-center gap-1.5 text-title-l text-on-surface">
+            {me.name}
+            <CrownBadge kind={me.crown} />
+          </h1>
+          <p className="mt-0.5 text-sm text-on-surface-variant">
+            В клубе {me.joinedAt} · {rankOf(me.id)} место в рейтинге
+          </p>
         </div>
 
         <div className="mt-5 flex items-end gap-3">

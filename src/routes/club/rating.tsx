@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ClubShell } from "@/components/md3/shell";
 import {
-  Avatar,
   CrownBadge,
   LevelBadge,
   LevelFilter,
@@ -56,7 +55,6 @@ function RatingPage() {
               )}
             >
               <RankBadge rank={rank} />
-              <Avatar player={p} size={44} />
               <div className="min-w-0 flex-1">
                 <p className="flex items-center gap-1.5 truncate text-title-m text-on-surface">
                   {p.name}

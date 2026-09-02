@@ -22,22 +22,7 @@ export function ClubHeader() {
           <span className="text-headline-s font-bold text-primary">{CLUB.name}</span>
           <span className="block text-xs text-on-surface-variant">{CLUB.subdomain}</span>
         </Link>
-        <div className="flex items-center gap-1">
-          <button
-            aria-label="Уведомления"
-            className="pressable relative flex size-10 items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container active:press-active"
-          >
-            <Bell className="size-5" />
-            <span className="absolute top-2 right-2 size-2 rounded-full bg-error" />
-          </button>
-          <Link
-            to="/admin/settings"
-            aria-label="Настройки"
-            className="pressable flex size-10 items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container active:press-active"
-          >
-            <Settings className="size-5" />
-          </Link>
-        </div>
+      
       </div>
     </header>
   );

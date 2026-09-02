@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useRef, useState } from "react";
 import { Camera, MoreVertical, Pencil, Plus, Search, Trash2 } from "lucide-react";
 import { ClubShell } from "@/components/md3/shell";
-import { Avatar, EmptyState, LevelBadge, Sheet } from "@/components/md3/ui";
+import { EmptyState, LevelBadge, Sheet } from "@/components/md3/ui";
 import { CLUB, PLAYERS, type Player } from "@/lib/mock-data";
 import { cn } from "@/lib/utils";
 
@@ -30,7 +30,6 @@ function PlayerRow({
 
   return (
     <div className="flex items-center gap-3 rounded-3xl bg-surface-container-low p-3 shadow-elev-1">
-      <Avatar player={player} size={44} />
       <div className="min-w-0 flex-1">
         <p className="truncate text-title-m text-on-surface">{player.name}</p>
         <div className="mt-1 flex items-center gap-2">

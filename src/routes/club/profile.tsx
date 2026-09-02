@@ -13,7 +13,7 @@ import {
   Zap,
 } from "lucide-react";
 import { ClubShell } from "@/components/md3/shell";
-import { Avatar, CrownBadge, LevelBadge, TrendBadge } from "@/components/md3/ui";
+import { CrownBadge, LevelBadge, TrendBadge } from "@/components/md3/ui";
 import {
   AWARDS,
   CLUB,
@@ -114,17 +114,14 @@ function ProfilePage() {
     <ClubShell nav="player">
       {/* Шапка профиля */}
       <section className="rounded-4xl bg-surface-container-low p-5 shadow-elev-1">
-        <div className="flex items-center gap-4">
-          <Avatar player={me} size={64} />
-          <div className="min-w-0">
-            <h1 className="flex items-center gap-1.5 text-title-l text-on-surface">
-              {me.name}
-              <CrownBadge kind={me.crown} />
-            </h1>
-            <p className="mt-0.5 text-sm text-on-surface-variant">
-              В клубе {me.joinedAt} · {rankOf(me.id)} место в рейтинге
-            </p>
-          </div>
+        <div className="min-w-0">
+          <h1 className="flex items-center gap-1.5 text-title-l text-on-surface">
+            {me.name}
+            <CrownBadge kind={me.crown} />
+          </h1>
+          <p className="mt-0.5 text-sm text-on-surface-variant">
+            В клубе {me.joinedAt} · {rankOf(me.id)} место в рейтинге
+          </p>
         </div>
 
         <div className="mt-5 flex items-end gap-3">
@@ -188,7 +185,6 @@ function ProfilePage() {
                   key={m.id}
                   className="flex items-center gap-3 rounded-3xl bg-surface-container-low p-3 shadow-elev-1"
                 >
-                  <Avatar player={opp} size={40} />
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-title-m text-on-surface">{opp.name}</p>
                     <p className="text-xs text-on-surface-variant">{m.date} · сеты {m.sets}</p>

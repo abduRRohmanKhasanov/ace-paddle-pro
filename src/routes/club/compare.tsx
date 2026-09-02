@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Swords, UserRoundSearch } from "lucide-react";
 import { ClubShell } from "@/components/md3/shell";
-import { Avatar, CrownBadge, Sheet } from "@/components/md3/ui";
+import { CrownBadge, Sheet } from "@/components/md3/ui";
 import {
   CLUB,
   CURRENT_PLAYER_ID,
@@ -147,7 +147,9 @@ function ComparePage() {
                   : "hover:bg-surface-container",
               )}
             >
-              <Avatar player={p} size={40} />
+              <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-surface-container-highest text-on-surface-variant">
+                <UserRoundSearch className="size-4" />
+              </span>
               <span className="flex-1 text-title-m text-on-surface">{p.name}</span>
               <span className="text-sm font-semibold text-on-surface-variant">{p.rating}</span>
             </button>
@@ -169,7 +171,9 @@ function PlayerSide({
 }) {
   const content = (
     <>
-      <Avatar player={player} size={56} />
+      <span className="flex size-14 shrink-0 items-center justify-center rounded-full bg-surface-container-highest text-on-surface-variant">
+        <UserRoundSearch className="size-6" />
+      </span>
       <span className="mt-2 flex items-center gap-1 text-center text-sm leading-tight font-semibold text-on-surface">
         {player.name}
         <CrownBadge kind={player.crown} />

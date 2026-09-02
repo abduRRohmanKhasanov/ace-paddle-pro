@@ -7,7 +7,6 @@ import {
   Trophy,
 } from "lucide-react";
 import { ClubShell } from "@/components/md3/shell";
-import { Avatar } from "@/components/md3/ui";
 import { CLUB, NEWS, PLAYERS, type NewsItem } from "@/lib/mock-data";
 
 export const Route = createFileRoute("/club/")({
@@ -45,7 +44,9 @@ function ChampionCard() {
         Действующий чемпион клуба
       </p>
       <div className="mt-4 flex items-center gap-4">
-        <Avatar player={champion} size={64} />
+        <span className="flex size-16 shrink-0 items-center justify-center rounded-full bg-on-primary/15">
+          <Trophy className="size-8 fill-gold text-gold" />
+        </span>
         <div className="min-w-0">
           <p className="truncate text-title-l text-on-primary">{champion.name}</p>
           <p className="mt-0.5 text-sm text-on-primary/80">

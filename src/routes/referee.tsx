@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/referee")({
   head: () => ({
     meta: [
-      { title: "Судейский режим — Стол 3 · RallyPoint" },
+      { title: "Судейский режим — Стол 3 · ttSetka" },
       { name: "description", content: "Живой счёт на столе без входа в аккаунт: очки, подача, сеты." },
       { property: "og:title", content: "Судейский режим — Стол 3" },
       { property: "og:description", content: "Ведение живого счёта матча настольного тенниса." },

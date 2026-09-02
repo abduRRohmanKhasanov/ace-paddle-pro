@@ -19,7 +19,7 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/club/rating")({
   head: () => ({
     meta: [
-      { title: `Рейтинг клуба «${CLUB.name}» — RallyPoint` },
+      { title: `Рейтинг клуба «${CLUB.name}» — ttSetka` },
       { name: "description", content: "Полный рейтинг игроков клуба с медалями топ-3 и трендом позиций." },
       { property: "og:title", content: `Рейтинг клуба «${CLUB.name}»` },
       { property: "og:description", content: "Места, уровни L1–L3 и динамика позиций после последнего турнира." },

@@ -12,7 +12,7 @@ import { CLUB, NEWS, PLAYERS, type NewsItem } from "@/lib/mock-data";
 export const Route = createFileRoute("/club/")({
   head: () => ({
     meta: [
-      { title: `Лента клуба «${CLUB.name}» — RallyPoint` },
+      { title: `Лента клуба «${CLUB.name}» — ttSetka` },
       { name: "description", content: "Новости клуба, карточка действующего чемпиона и итоги турниров." },
       { property: "og:title", content: `Лента клуба «${CLUB.name}»` },
       { property: "og:description", content: "Новости, чемпион клуба и автогенерируемые итоги турниров." },

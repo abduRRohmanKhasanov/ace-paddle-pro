@@ -6,7 +6,7 @@ import { CLUB } from "@/lib/mock-data";
 export const Route = createFileRoute("/club/rules")({
   head: () => ({
     meta: [
-      { title: `Регламент клуба «${CLUB.name}» — RallyPoint` },
+      { title: `Регламент клуба «${CLUB.name}» — ttSetka` },
       { name: "description", content: "Правила платформы, регламент клуба и каналы связи." },
       { property: "og:title", content: `Регламент клуба «${CLUB.name}»` },
       { property: "og:description", content: "Два уровня правил и контакты: администратор, поддержка, разработчик." },
@@ -64,7 +64,7 @@ function RulesPage() {
       <div className="flex flex-col gap-4">
         <RuleSection
           title="Правила платформы"
-          caption="Одинаковы для всех клубов RallyPoint, не редактируются клубом"
+          caption="Одинаковы для всех клубов ttSetka, не редактируются клубом"
           rules={PLATFORM_RULES}
         />
         <RuleSection

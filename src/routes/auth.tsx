@@ -10,13 +10,13 @@ export const Route = createFileRoute("/auth")({
   }),
   head: () => ({
     meta: [
-      { title: "Вход и регистрация клуба — RallyPoint" },
+      { title: "Вход и регистрация клуба — ttSetka" },
       {
         name: "description",
         content:
-          "Войдите как администратор клуба или зарегистрируйте новый клуб в RallyPoint: по телефону, почте или через Google.",
+          "Войдите как администратор клуба или зарегистрируйте новый клуб в ttSetka: по телефону, почте или через Google.",
       },
-      { property: "og:title", content: "Вход и регистрация клуба — RallyPoint" },
+      { property: "og:title", content: "Вход и регистрация клуба — ttSetka" },
       {
         property: "og:description",
         content: "Один аккаунт администратора — весь клуб настольного тенниса под контролем.",
@@ -69,7 +69,7 @@ function AuthPage() {
           </h1>
           <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">
             {isSignup
-              ? "Первая версия RallyPoint открыта для администраторов клубов. После регистрации — 4 шага настройки, и клуб готов."
+              ? "Первая версия ttSetka открыта для администраторов клубов. После регистрации — 4 шага настройки, и клуб готов."
               : "Войдите в аккаунт администратора, чтобы попасть в панель своего клуба."}
           </p>
         </div>

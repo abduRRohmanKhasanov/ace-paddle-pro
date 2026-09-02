@@ -20,9 +20,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/onboarding")({
   head: () => ({
     meta: [
-      { title: "Создание клуба — RallyPoint" },
+      { title: "Создание клуба — ttSetka" },
       { name: "description", content: "Мастер настройки клуба: поддомен, цвет, рейтинговое ядро и регламент." },
-      { property: "og:title", content: "Создание клуба — RallyPoint" },
+      { property: "og:title", content: "Создание клуба — ttSetka" },
       { property: "og:description", content: "Четыре шага до собственного PWA клуба настольного тенниса." },
     ],
   }),

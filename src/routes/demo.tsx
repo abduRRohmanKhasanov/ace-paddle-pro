@@ -4,13 +4,13 @@ import { ArrowLeft, ArrowRight, ClipboardList, Sparkles, Trophy, User } from "lu
 export const Route = createFileRoute("/demo")({
   head: () => ({
     meta: [
-      { title: "Демо-режим RallyPoint — выбор роли" },
+      { title: "Демо-режим ttSetka — выбор роли" },
       {
         name: "description",
         content:
-          "Пройдите сценарий игрока, администратора клуба или судьи стола в кликабельном прототипе RallyPoint.",
+          "Пройдите сценарий игрока, администратора клуба или судьи стола в кликабельном прототипе ttSetka.",
       },
-      { property: "og:title", content: "Демо-режим RallyPoint — выбор роли" },
+      { property: "og:title", content: "Демо-режим ttSetka — выбор роли" },
       {
         property: "og:description",
         content: "Игрок, администратор и судья: три сценария демонстрационного клуба «ТопСпин».",

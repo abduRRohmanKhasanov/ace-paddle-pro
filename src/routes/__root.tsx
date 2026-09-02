@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
-      { title: "RallyPoint — платформа для клубов настольного тенниса" },
+      { title: "ttSetka — платформа для клубов настольного тенниса" },
       {
         name: "description",
         content:
-          "RallyPoint — мультитенантный SaaS для клубов настольного тенниса: рейтинги, турниры, судейство столов и лента клуба в одном PWA.",
+          "ttSetka — мультитенантный SaaS для клубов настольного тенниса: рейтинги, турниры, судейство столов и лента клуба в одном PWA.",
       },
-      { name: "author", content: "RallyPoint" },
-      { property: "og:title", content: "RallyPoint — платформа для клубов настольного тенниса" },
+      { name: "author", content: "ttSetka" },
+      { property: "og:title", content: "ttSetka — платформа для клубов настольного тенниса" },
       {
         property: "og:description",
         content: "Рейтинги, турниры, судейство и лента клуба — мобильное PWA для клубов настольного тенниса.",

@@ -6,7 +6,7 @@ import { CLUB } from "@/lib/mock-data";
 export const Route = createFileRoute("/admin/settings")({
   head: () => ({
     meta: [
-      { title: `Настройки клуба «${CLUB.name}» — RallyPoint` },
+      { title: `Настройки клуба «${CLUB.name}» — ttSetka` },
       { name: "description", content: "Информация о клубе, внешний вид, рейтинговое ядро и регламент." },
       { property: "og:title", content: `Настройки клуба «${CLUB.name}»` },
       { property: "og:description", content: "Редактирование параметров клуба после онбординга." },

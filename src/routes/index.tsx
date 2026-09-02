@@ -107,10 +107,10 @@ function Landing() {
             aria-label="Открыть демо-режим выбора роли"
           >
             <span className="flex size-9 items-center justify-center rounded-2xl bg-primary">
-              <span className="text-base font-extrabold text-on-primary">R</span>
+              <span className="text-base font-extrabold text-on-primary">tt</span>
             </span>
             <span className="text-title-m text-on-surface">
-              Rally<span className="text-primary">Point</span>
+              tt<span className="text-primary">Setka</span>
             </span>
           </Link>
           <AuthButtons />

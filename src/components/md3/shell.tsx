@@ -22,7 +22,6 @@ export function ClubHeader() {
           <span className="text-headline-s font-bold text-primary">{CLUB.name}</span>
           <span className="block text-xs text-on-surface-variant">{CLUB.subdomain}</span>
         </Link>
-      
       </div>
     </header>
   );

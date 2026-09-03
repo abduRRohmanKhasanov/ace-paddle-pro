@@ -245,7 +245,6 @@ function Landing() {
             Платформа для клубов настольного тенниса
           </p>
           <Link to="/demo" className="text-sm font-semibold text-primary hover:underline">
-            Демо-режим
           </Link>
         </div>
       </footer>

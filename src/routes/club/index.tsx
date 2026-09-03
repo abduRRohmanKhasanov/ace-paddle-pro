@@ -34,7 +34,7 @@ function ChampionCard() {
   return (
     <Link
       to="/club/profile"
-      className="pressable relative block overflow-hidden rounded-4xl bg-primary p-5 shadow-elev-2 active:press-active"
+      className="pressable relative flex flex-col overflow-hidden rounded-4xl bg-primary p-5 shadow-elev-2 active:press-active"
     >
       <div
         className="pointer-events-none absolute -top-16 -right-16 size-48 rounded-full opacity-20"

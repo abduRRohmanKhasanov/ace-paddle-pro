@@ -2,8 +2,8 @@ import { type ReactNode, useEffect } from "react";
 import {
   ArrowDown,
   ArrowUp,
-  Crown,
   Minus,
+  Trophy,
   X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -58,17 +58,46 @@ export function LevelBadge({ level, className }: { level: Level; className?: str
   );
 }
 
-/* ---------- Корона чемпиона ---------- */
-export function CrownBadge({ kind }: { kind: Player["crown"] }) {
+/* ---------- Кубок чемпиона ---------- */
+export function CrownBadge({ kind, size = 16 }: { kind: Player["crown"]; size?: number }) {
   if (!kind) return null;
   return (
-    <Crown
-      className={cn(
-        "inline size-4 shrink-0",
-        kind === "current" ? "fill-gold text-gold" : "fill-outline-variant text-outline-variant",
-      )}
+    <Trophy
+      className="inline shrink-0"
+      style={{
+        width: size,
+        height: size,
+        color: kind === "current" ? "var(--gold)" : "var(--silver)",
+        fill: kind === "current" ? "var(--gold)" : "var(--silver)",
+      }}
       aria-label={kind === "current" ? "Действующий чемпион" : "Экс-чемпион"}
     />
+  );
+}
+
+/* ---------- Полоса формы: последние 7 встреч ---------- */
+export function FormStrip({ form }: { form: number[] }) {
+  return (
+    <div className="flex items-center gap-1.5" aria-label="Результаты последних 7 встреч">
+      {form.map((d, i) => (
+        <span
+          key={i}
+          className={cn(
+            "inline-flex items-center gap-px text-[11px] font-semibold tabular-nums",
+            d > 0 ? "text-success" : d < 0 ? "text-error" : "text-on-surface-variant",
+          )}
+        >
+          {d > 0 ? (
+            <ArrowUp className="size-3" />
+          ) : d < 0 ? (
+            <ArrowDown className="size-3" />
+          ) : (
+            <Minus className="size-3" />
+          )}
+          {d !== 0 && Math.abs(d)}
+        </span>
+      ))}
+    </div>
   );
 }
 

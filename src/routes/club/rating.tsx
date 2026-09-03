@@ -6,7 +6,7 @@ import {
   LevelBadge,
   LevelFilter,
   RankBadge,
-  TrendBadge,
+  FormStrip,
 } from "@/components/md3/ui";
 import {
   CLUB,
@@ -58,19 +58,19 @@ function RatingPage() {
               <div className="min-w-0 flex-1">
                 <p className="flex items-center gap-1.5 truncate text-title-m text-on-surface">
                   {p.name}
-                  <CrownBadge kind={p.crown} />
+                  <CrownBadge kind={p.crown} size={18} />
                   {isMe && (
                     <span className="rounded-full bg-secondary px-2 py-0.5 text-[10px] font-bold text-on-secondary">
                       Вы
                     </span>
                   )}
                 </p>
-                <div className="mt-1 flex items-center gap-2">
-                  <LevelBadge level={p.level} />
-                  <span className="text-sm font-semibold text-on-surface">{p.rating}</span>
+                <div className="mt-1.5">
+                  <FormStrip form={p.form} />
                 </div>
               </div>
-              <TrendBadge value={p.trend} />
+              <LevelBadge level={p.level} className="px-2.5 py-1 text-sm" />
+              <span className="text-title-l font-bold tabular-nums text-on-surface">{p.rating}</span>
             </Link>
           );
         })}

@@ -14,6 +14,7 @@ export interface Player {
   crown: "current" | "former" | null;
   joinedAt: string;
   avatarHue: number;
+  form: number[]; // изменение рейтинга за последние 7 встреч (свежие — справа)
 }
 
 export const CLUB = {
@@ -26,18 +27,18 @@ export const CLUB = {
 };
 
 export const PLAYERS: Player[] = [
-  { id: "p1", name: "Алексей Смирнов", initials: "АС", rating: 1840, level: "L1", matches: 87, wins: 71, trend: 0, crown: "current", joinedAt: "с марта 2024", avatarHue: 178 },
-  { id: "p2", name: "Дмитрий Козлов", initials: "ДК", rating: 1795, level: "L1", matches: 92, wins: 68, trend: 1, crown: null, joinedAt: "с января 2024", avatarHue: 215 },
-  { id: "p3", name: "Мария Ветрова", initials: "МВ", rating: 1762, level: "L1", matches: 74, wins: 55, trend: -1, crown: null, joinedAt: "с мая 2024", avatarHue: 330 },
-  { id: "p4", name: "Никита Орлов", initials: "НО", rating: 1701, level: "L1", matches: 81, wins: 52, trend: 2, crown: "former", joinedAt: "с февраля 2024", avatarHue: 65 },
-  { id: "p5", name: "Игорь Соколов", initials: "ИС", rating: 1655, level: "L1", matches: 63, wins: 38, trend: -2, crown: null, joinedAt: "с июня 2024", avatarHue: 25 },
-  { id: "p6", name: "Анна Лебедева", initials: "АЛ", rating: 1602, level: "L1", matches: 58, wins: 34, trend: 3, crown: null, joinedAt: "с сентября 2024", avatarHue: 280 },
-  { id: "p7", name: "Павел Морозов", initials: "ПМ", rating: 1560, level: "L2", matches: 66, wins: 33, trend: 0, crown: null, joinedAt: "с апреля 2024", avatarHue: 145 },
-  { id: "p8", name: "Ольга Зимина", initials: "ОЗ", rating: 1512, level: "L2", matches: 49, wins: 24, trend: 1, crown: null, joinedAt: "с октября 2024", avatarHue: 190 },
-  { id: "p9", name: "Сергей Волков", initials: "СВ", rating: 1468, level: "L2", matches: 71, wins: 29, trend: -1, crown: "former", joinedAt: "с декабря 2023", avatarHue: 250 },
-  { id: "p10", name: "Елена Крайнова", initials: "ЕК", rating: 1401, level: "L2", matches: 37, wins: 16, trend: 0, crown: null, joinedAt: "с ноября 2024", avatarHue: 100 },
-  { id: "p11", name: "Артём Гусев", initials: "АГ", rating: 1330, level: "L3", matches: 28, wins: 10, trend: 2, crown: null, joinedAt: "с января 2025", avatarHue: 310 },
-  { id: "p12", name: "Вера Полякова", initials: "ВП", rating: 1245, level: "L3", matches: 19, wins: 6, trend: -1, crown: null, joinedAt: "с марта 2025", avatarHue: 40 },
+  { id: "p1", name: "Алексей Смирнов", initials: "АС", rating: 1840, level: "L1", matches: 87, wins: 71, trend: 0, crown: "current", joinedAt: "с марта 2024", avatarHue: 178, form: [8, 12, 0, 15, -6, 9, 11] },
+  { id: "p2", name: "Дмитрий Козлов", initials: "ДК", rating: 1795, level: "L1", matches: 92, wins: 68, trend: 1, crown: null, joinedAt: "с января 2024", avatarHue: 215, form: [-5, 10, 14, 7, 0, 12, 9] },
+  { id: "p3", name: "Мария Ветрова", initials: "МВ", rating: 1762, level: "L1", matches: 74, wins: 55, trend: -1, crown: null, joinedAt: "с мая 2024", avatarHue: 330, form: [11, -8, 6, 0, 13, -4, 8] },
+  { id: "p4", name: "Никита Орлов", initials: "НО", rating: 1701, level: "L1", matches: 81, wins: 52, trend: 2, crown: "former", joinedAt: "с февраля 2024", avatarHue: 65, form: [14, -9, 21, -4, 10, 0, 12] },
+  { id: "p5", name: "Игорь Соколов", initials: "ИС", rating: 1655, level: "L1", matches: 63, wins: 38, trend: -2, crown: null, joinedAt: "с июня 2024", avatarHue: 25, form: [-11, 7, -6, 9, 4, -8, 5] },
+  { id: "p6", name: "Анна Лебедева", initials: "АЛ", rating: 1602, level: "L1", matches: 58, wins: 34, trend: 3, crown: null, joinedAt: "с сентября 2024", avatarHue: 280, form: [6, 9, 0, 12, 7, -3, 10] },
+  { id: "p7", name: "Павел Морозов", initials: "ПМ", rating: 1560, level: "L2", matches: 66, wins: 33, trend: 0, crown: null, joinedAt: "с апреля 2024", avatarHue: 145, form: [-4, 8, 5, -7, 0, 6, 3] },
+  { id: "p8", name: "Ольга Зимина", initials: "ОЗ", rating: 1512, level: "L2", matches: 49, wins: 24, trend: 1, crown: null, joinedAt: "с октября 2024", avatarHue: 190, form: [9, -5, 4, 7, -6, 0, 8] },
+  { id: "p9", name: "Сергей Волков", initials: "СВ", rating: 1468, level: "L2", matches: 71, wins: 29, trend: -1, crown: "former", joinedAt: "с декабря 2023", avatarHue: 250, form: [-7, 3, -9, 5, 6, -4, 2] },
+  { id: "p10", name: "Елена Крайнова", initials: "ЕК", rating: 1401, level: "L2", matches: 37, wins: 16, trend: 0, crown: null, joinedAt: "с ноября 2024", avatarHue: 100, form: [4, -6, 0, 5, -3, 7, 1] },
+  { id: "p11", name: "Артём Гусев", initials: "АГ", rating: 1330, level: "L3", matches: 28, wins: 10, trend: 2, crown: null, joinedAt: "с января 2025", avatarHue: 310, form: [6, 8, -4, 9, 0, 5, 7] },
+  { id: "p12", name: "Вера Полякова", initials: "ВП", rating: 1245, level: "L3", matches: 19, wins: 6, trend: -1, crown: null, joinedAt: "с марта 2025", avatarHue: 40, form: [-5, 4, -8, 3, 6, -2, 4] },
 ];
 
 // «Вы» — текущий игрок, чьими глазами смотрим прототип

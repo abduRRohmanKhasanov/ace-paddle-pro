@@ -242,7 +242,7 @@ function Landing() {
             tt<span className="text-primary">Setka</span>
           </span>
           <p className="text-xs text-on-surface-variant">
-            Платформа для клубов настольного тенниса · Material Design 3 · демо-данные
+            Платформа для клубов настольного тенниса
           </p>
           <Link to="/demo" className="text-sm font-semibold text-primary hover:underline">
             Демо-режим

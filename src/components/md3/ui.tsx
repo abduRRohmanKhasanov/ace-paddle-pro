@@ -2,8 +2,8 @@ import { type ReactNode, useEffect } from "react";
 import {
   ArrowDown,
   ArrowUp,
-  Crown,
   Minus,
+  Trophy,
   X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";

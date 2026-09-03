@@ -41,7 +41,7 @@ function ChampionCard() {
         style={{ backgroundColor: "var(--on-primary)" }}
       />
       <p className="text-xs font-semibold tracking-widest text-on-primary/80 uppercase">
-        Действующий чемпион клуба
+        {"\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0ДЕЙСТВУЮЩИЙ ЧЕМПИОН КЛУБА"}
       </p>
       <div className="mt-4 flex items-center gap-4">
         <span className="flex size-16 shrink-0 items-center justify-center rounded-full bg-on-primary/15">

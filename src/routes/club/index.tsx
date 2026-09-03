@@ -56,9 +56,10 @@ function ChampionCard() {
           </p>
         </div>
       </div>
-      <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-on-primary/15 px-3 py-1.5 text-sm font-semibold text-on-primary">
+      <div className="mt-4 ml-auto inline-flex items-center gap-2 rounded-full bg-on-primary/15 px-3 py-1.5 text-sm font-semibold text-on-primary">
         <Trophy className="size-4" />
-        Рейтинг {champion.rating}
+        <span>Рейтинг</span>
+        <span className="text-xl font-bold text-gold">{champion.rating}</span>
       </div>
     </Link>
   );

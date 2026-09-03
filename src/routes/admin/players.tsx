@@ -105,6 +105,7 @@ function AddPlayerSheet({
       crown: null,
       joinedAt: "сегодня",
       avatarHue: Math.floor(Math.random() * 360),
+      form: [],
     });
     setName("");
     setPhone("");

@@ -6,7 +6,7 @@ import {
   LevelBadge,
   LevelFilter,
   RankBadge,
-  TrendBadge,
+  FormStrip,
 } from "@/components/md3/ui";
 import {
   CLUB,

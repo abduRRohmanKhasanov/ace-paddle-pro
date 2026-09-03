@@ -50,7 +50,9 @@ function ChampionCard() {
         <div className="min-w-0">
           <p className="truncate text-title-l text-on-primary">{champion.name}</p>
           <p className="mt-0.5 text-sm text-on-primary/80">
-            Титул защищён 21 августа · «Летний кубок 2026»
+            Титул защищён 21 августа
+            <br />
+            «Летний кубок 2026»
           </p>
         </div>
       </div>

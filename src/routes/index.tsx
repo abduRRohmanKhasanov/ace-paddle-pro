@@ -212,8 +212,9 @@ function Landing() {
         <section className="mt-14 rounded-4xl bg-primary-container p-7 text-center shadow-elev-2">
           <h2 className="text-headline-s text-on-primary-container">Готовы попробовать?</h2>
           <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-on-primary-container/85">
-            В первой версии клуб регистрирует администратор. Вход и регистрация — по номеру
-            телефона, почте или через Google, Apple, VK и Telegram.
+            В первой версии клуб регистрирует администратор.
+            <br />
+            Вход и регистрация — по номеру телефона или почте.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <Link

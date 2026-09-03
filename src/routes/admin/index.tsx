@@ -58,23 +58,27 @@ function AdminDashboard() {
       <div className="mt-4 grid grid-cols-2 gap-3">
         <Link
           to="/admin/players"
-          className="pressable rounded-3xl bg-surface-container-low p-4 shadow-elev-1 hover:bg-surface-container active:press-active"
+          className="pressable flex flex-col justify-between rounded-3xl bg-surface-container-low p-4 shadow-elev-1 hover:bg-surface-container active:press-active"
         >
-          <span className="flex size-10 items-center justify-center rounded-2xl bg-secondary-container text-on-secondary-container">
-            <Users className="size-5" />
-          </span>
-          <p className="mt-3 text-headline-s text-on-surface">{PLAYERS.length}</p>
-          <p className="text-sm text-on-surface-variant">Игроки</p>
+          <div className="flex items-start justify-between">
+            <span className="flex size-10 items-center justify-center rounded-2xl bg-secondary-container text-on-secondary-container">
+              <Users className="size-5" />
+            </span>
+            <span className="text-headline-l font-bold text-on-surface">{PLAYERS.length}</span>
+          </div>
+          <p className="text-title-m font-bold text-on-surface">Игроки</p>
         </Link>
         <Link
           to="/admin/tournaments"
-          className="pressable rounded-3xl bg-surface-container-low p-4 shadow-elev-1 hover:bg-surface-container active:press-active"
+          className="pressable flex flex-col justify-between rounded-3xl bg-surface-container-low p-4 shadow-elev-1 hover:bg-surface-container active:press-active"
         >
-          <span className="flex size-10 items-center justify-center rounded-2xl bg-tertiary-container text-on-tertiary-container">
-            <Trophy className="size-5" />
-          </span>
-          <p className="mt-3 text-headline-s text-on-surface">{finished}</p>
-          <p className="text-sm text-on-surface-variant">Турниров завершено</p>
+          <div className="flex items-start justify-between">
+            <span className="flex size-10 items-center justify-center rounded-2xl bg-tertiary-container text-on-tertiary-container">
+              <Trophy className="size-5" />
+            </span>
+            <span className="text-headline-l font-bold text-on-surface">{finished}</span>
+          </div>
+          <p className="text-title-m font-bold text-on-surface">Турниров завершено</p>
         </Link>
       </div>
 
